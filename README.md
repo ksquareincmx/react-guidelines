@@ -1,5 +1,7 @@
 # KSquare React Guidelines
 
+> NOTE: This guide takes for granted that you are using typescript + react
+
 ## Functions
 1. Favor `arrow functions` expressions over function declarations or named expressions
 ```js
