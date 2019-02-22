@@ -33,6 +33,32 @@ class Card extends React.Component{
 }
 ```
 
+2. Interfaces should have the prefix `I`
+```js
+// good
+interface IUser {
+  // ...
+}
+
+// bad
+interface User {
+  // ...
+}
+```
+
+3. Prop-related interfaces should have the following structure `I[Component]Props`
+```js
+// good
+interface ICardProps {
+  // ...
+}
+
+// bad
+interface AnythingElse {
+  // ...
+}
+```
+
 ## Modules
 
 1. Favor `named exports` over `export default`
