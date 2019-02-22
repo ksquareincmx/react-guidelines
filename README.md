@@ -4,15 +4,15 @@
 1. Favor `arrow functions` expressions over function declarations or named expressions
 ```js
 // good
-const isEven = number => number % 2 === 0;
+const isEven = (n: number): number => n % 2 === 0;
 
 // bad
-function isEven(number) {
-  return number % 2 === 0;
+function isEven(n: number): number {
+  return n % 2 === 0;
 }
 
-const isEven = function (number) {
-  return number % 2 === 0;
+const isEven = function (n: number): number {
+  return n % 2 === 0;
 }
 ```
 
@@ -21,12 +21,12 @@ const isEven = function (number) {
 1. Favor `named exports` over `export default`
 ```js
 // good
-export const Card = () => {
+export const Card: React.FC = () => {
   // ..
 }
 
 // bad
-const Card = () => {
+const Card: React.FC = () => {
   // ..
 }
 
