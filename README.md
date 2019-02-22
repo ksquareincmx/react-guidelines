@@ -2,6 +2,8 @@
 
 > NOTE: This guide takes for granted that you are using typescript + react
 
+If you wan't to contribute to the guideline follow the [contribution guide](https://github.com/ksquarelabsmx/react-guidelines/blob/master/CONTRIBUTING.md)
+
 ## Functions
 1. Favor `arrow functions` expressions over function declarations or named expressions
 ```js
