@@ -7,6 +7,15 @@ Title: don't use semicolons
 Date: DD/MM/YYYY
 By: [YOUR-NAME]
 
+## Examples
+```js
+// good
+var data = 10;
+
+// bad
+var data = 10
+```
+
 ## Motivations
 Some detailed explanation of why this needs to be included in the guidelines
 
