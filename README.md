@@ -4,7 +4,7 @@
 
 If you wan't to contribute to the guideline follow the [contribution guide](https://github.com/ksquarelabsmx/react-guidelines/blob/master/CONTRIBUTING.md)
 
-## Objects
+## Objects
 
 1. Favor object shorthand syntax
 
