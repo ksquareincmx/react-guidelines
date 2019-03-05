@@ -22,6 +22,93 @@ const user = {
 };
 ```
 
+2. Prefer object destructuring access to functions prop and properties in objects
+
+For props with "one nested level":
+
+```js
+const user = {
+  name: "John Doe",
+  age: 50
+};
+
+// Good
+const useUserInfo = user => {
+  const { name, age } = user;
+  //...
+};
+
+// Better
+const useUserInfo = ({ name, age }) => {
+  //...
+};
+
+useUserInfo(user);
+```
+
+For props with "many nested levels"
+
+```js
+const user = {
+  name: {
+    first: "John",
+    last: "Doe"
+  },
+  age: 50
+};
+
+// Good
+const useUserInfo = user => {
+  const {
+    name: { first, last },
+    age
+  } = user;
+  //...
+};
+
+// This is the best for small objects
+const useUserInfo = ({ name: { first, last }, age }) => {
+  //...
+};
+
+// This is the best for any size I think
+const useUserInfo = ({ name, age }) => {
+  const { first, last } = name;
+  //...
+};
+
+useUserInfo(user);
+```
+
+Working with arrays
+
+```js
+const carsList = [
+  {
+    brand: "ferrari",
+    type: "sportscar",
+    engine: {
+      horsepower: 600,
+      liters: 4,
+      fuel: "gas"
+    },
+    wheels: 4
+  },
+  {
+    brand: "porshe",
+    type: "sportscar",
+    engine: {
+      horsepower: 455,
+      liters: 6,
+      fuel: "gas"
+    },
+    wheels: 4
+  }
+];
+
+const [ferrari, porsche] = carsList;
+```
+
 ## Functions
 
 1. Favor `arrow functions` expressions over function declarations or named expressions
