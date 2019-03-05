@@ -171,6 +171,20 @@ interface AnythingElse {
 }
 ```
 
+4. State-related interfaces should have the following structure `I[Component]State`
+
+```js
+// good
+interface ICardState {
+  // ...
+}
+
+// bad
+interface AnythingElse {
+  // ...
+}
+```
+
 ## Modules
 
 1. Favor `named exports` over `export default`
